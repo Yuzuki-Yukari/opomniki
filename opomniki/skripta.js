@@ -35,7 +35,7 @@ window.addEventListener('load', function() {
 			
 			if(cas == 0)
 			{
-				alert("Opomnik!\n\nZadolžitev " + opomnik + " je potekla!");
+				alert("Opomnik!\n\nZadolžitev " + opomnik.querySelector(".naziv_opomnika").innerHTML + " je potekla!");
 				document.querySelector("#opomniki").removeChild(opomnik);
 			}
 			else
