@@ -1,6 +1,7 @@
 window.addEventListener('load', function() {
 	//stran nalozena
 	
+	// sign in stuff
 	var signIn = function(event)
 	{
 		var username = document.querySelector('#uporabnisko_ime').value;
@@ -9,6 +10,19 @@ window.addEventListener('load', function() {
 	}
 	
 	document.querySelector('#prijavniGumb').addEventListener('click', signIn);
+	
+	// reminder stuff
+	var newReminder = function(event)
+	{
+		var name = document.querySelector("#naziv_opomnika").value;
+		document.querySelector("#naziv_opomnika").value = "";
+		var duration = document.querySelector("#cas_opomnika").value;
+		document.querySelector("#cas_opomnika").value = "";
+		
+		document.querySelector("#opomniki").innerHTML += "<div class='opomnik'> <div class='naziv_opomnika'>" + name + "</div><div class='cas_opomnika'> Opomnik čez <span>" + duration + "</span> sekund.</div></div>";
+	}
+	
+	document.querySelector("#dodajGumb").addEventListener('click', newReminder)
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
