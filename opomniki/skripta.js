@@ -1,5 +1,14 @@
 window.addEventListener('load', function() {
 	//stran nalozena
+	
+	var signIn = function(event)
+	{
+		var username = document.querySelector('#uporabnisko_ime').value;
+		document.querySelector('#uporabnik').innerHTML = username;
+		document.querySelector('.pokrivalo').style.display = "none";
+	}
+	
+	document.querySelector('#prijavniGumb').addEventListener('click', signIn);
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
